@@ -1,78 +1,239 @@
-.hero{
-    height: calc(100vh - 100px);
-    overflow: hidden;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-    position: relative;
+// @import "../../app.scss";
+
+// .hero{
+//     height: calc(100vh - 100px);
+//     overflow: hidden;
+//     background: linear-gradient(180deg, #0c0c1d, #111132);
+//     position: relative;
 
 
-    .wrapper{
-        max-width: 1366px;
-        padding-left: 50px;
+//     .wrapper{
+//         max-width: 1366px;
+//         padding-left: 50px;
+//         height: 100%;
+//         margin: auto;
+
+//         .textContainer{
+//             width: 50%;
+//             height: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             gap: 40px;
+
+//             @include mobile{
+//                 height: 50%;
+//                 width: 100%;
+//                 gap: 20px;
+//                 align-items: center;
+//                 text-align: center;
+//             }
+
+
+//             h2{
+//                 font-size: 30px;
+//                 color: purple;
+//                 letter-spacing: 10px;
+
+                
+//             }
+
+//             h1{
+//                 font-size: 88px;
+
+//                 @include mobile{
+//                 font-size: 36px;
+//             }
+//             }
+
+//             .buttons{
+//                 button{
+//                     padding: 20px;
+//                     border: 1px solid white;
+//                     border-radius: 10px;
+//                     background-color: transparent;
+//                     color: white;
+//                     margin-right: 20px;
+//                     cursor: pointer;
+//                     font-weight: 300;
+//                 }
+//             }
+
+//             img{
+//                 width: 50px;
+//             }
+//         }
+//     }
+
+//     .imageContainer{
+//         position: absolute;
+//         top: 50%;
+//         right: 10px;
+//         transform: translateY(-50%);
+//         height: 100%;
+
+//         @include mobile{
+//             display: none;
+//         }
+        
+
+//         img{
+//             width: 750px;
+//             height: 100%;
+//             -webkit-mask-image: radial-gradient(circle, black 65%, transparent 100%);
+//             mask-image: radial-gradient(circle, black 65%, transparent 100%);
+
+//             filter: blur(0.3px);
+
+            
+//         }
+//     }
+
+//     .slidingTextContainer{
+//         position: absolute;
+//         font-size: 50vh;
+//         bottom: -100px;
+//         white-space: nowrap;
+//         color: #ffffff09;
+//         width: 50%;
+//         font-weight: bold;
+//     }
+// }
+
+
+
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+
+  .wrapper {
+    max-width: 1366px;
+    padding-left: 50px;
+    height: 100%;
+    margin: auto;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+
+      @include mobile {
         height: 100%;
-        margin: auto;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+      }
 
-        .textContainer{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 40px;
+      /* Name Text */
+      h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        font-weight: 500;
 
+        background: linear-gradient(90deg, #a855f7, #ec4899);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-            h2{
-                font-size: 30px;
-                color: purple;
-                letter-spacing: 10px;
-            }
+      /* Main Title */
+      h1 {
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1.1;
 
-            h1{
-                font-size: 88px;
-            }
-
-            .buttons{
-                button{
-                    padding: 20px;
-                    border: 1px solid white;
-                    border-radius: 10px;
-                    background-color: transparent;
-                    color: white;
-                    margin-right: 20px;
-                    cursor: pointer;
-                    font-weight: 300;
-                }
-            }
-
-            img{
-                width: 50px;
-            }
+        @include mobile {
+          font-size: 36px;
         }
-    }
+      }
 
-    .imageContainer{
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        height: 100%;
+      /* Buttons */
+      .buttons {
+        display: flex;
+        gap: 20px;
 
-        img{
-            width: 750px;
-            height: 100%;
-            -webkit-mask-image: radial-gradient(circle, black 65%, transparent 100%);
-            mask-image: radial-gradient(circle, black 65%, transparent 100%);
-
-            filter: blur(0.3px);
+        @include mobile {
+          justify-content: center;
+          flex-wrap: wrap;
         }
+
+        button {
+          padding: 16px 28px;
+          border: 1px solid white;
+          border-radius: 12px;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 400;
+          transition: 0.3s;
+        }
+
+        button:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+
+      /* Scroll Icon */
+      img {
+        width: 45px;
+        margin-top: 10px;
+        animation: bounce 1.5s infinite;
+      }
+    }
+  }
+
+  /* Right Side Image */
+  .imageContainer {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    height: 100%;
+
+    @include mobile {
+      display: none;
     }
 
-    .slidingTextContainer{
-        position: absolute;
-        font-size: 50vh;
-        bottom: -100px;
-        white-space: nowrap;
-        color: #ffffff09;
-        width: 50%;
-        font-weight: bold;
+    img {
+      width: 700px;
+      height: 100%;
+      object-fit: contain;
+
+      -webkit-mask-image: radial-gradient(circle, black 65%, transparent 100%);
+      mask-image: radial-gradient(circle, black 65%, transparent 100%);
+
+      filter: blur(0.3px);
     }
+  }
+
+  /* Sliding Background Text */
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 45vh;
+    bottom: -80px;
+    white-space: nowrap;
+    color: #ffffff08;
+    width: 100%;
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+
+/* Scroll icon animation */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
 }

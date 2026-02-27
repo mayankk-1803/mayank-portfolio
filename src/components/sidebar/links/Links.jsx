@@ -32,7 +32,6 @@ function Links() {
     "Techstack",
     "Projects",
     "Contact",
-    "About"
   ]
 
   return (

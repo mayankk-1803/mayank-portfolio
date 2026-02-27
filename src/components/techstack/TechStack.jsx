@@ -26,7 +26,7 @@ const TechStack = () => {
     const isInView = useInView(ref,{margin:"-100px"})
 
   return (
-    <motion.div className='techstack' variants={variants} initial="initial" ref={ref} animate={isInView && "animate"}>
+    <motion.div className='techstack' variants={variants} initial="initial" ref={ref} animate={ window.innerWidth<= 738 ? "animate" : isInView && "animate"}>
         <motion.div className="textContainer" variants={variants}>
             <p>Tools and technologies I use to build<br /> modern web applications</p>
             <hr />
@@ -42,54 +42,105 @@ const TechStack = () => {
             </div>
         </motion.div>
         <motion.div className="listContainer" variants={variants}>
-            <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Frontend Development</h2>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React.js</li>
-                    <li>TailwindCSS</li>
-                    <li>Framer Motion</li>
-                </ul>
-                <button>Explore</button>
-            </motion.div>
-            <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Backend Development</h2>
-                <ul>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>MongoDB</li>
-                    <li>Firebase</li>
-                    <li>REST APIs</li>
-                    <li>JWT Auth</li>
-                </ul>
-                <button>Explore</button>
-            </motion.div>
-            <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Tools & Technologies</h2>
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Postman</li>
-                    <li>VS Code</li>
-                    <li>Netlify</li>
-                    <li>Vercel</li>
-                    <li>Render</li>
-                </ul>
-                <button>Explore</button>
-            </motion.div>
-            <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                <h2>Cloud & Other Skills</h2>
-                <ul>
-                    <li>AWS EC2</li>
-                    <li>AWS S3</li>
-                    <li>API Integration</li>
-                    <li>Responsive Design</li>
-                </ul>
-                <button>Explore</button>
-            </motion.div>
 
-        </motion.div>
+{/* Desktop Boxes */}
+
+<div className="desktopBoxes">
+
+<motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+<h2>Frontend Development</h2>
+<ul>
+<li>HTML5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React.js</li>
+<li>TailwindCSS</li>
+<li>Framer Motion</li>
+</ul>
+<a href='#Projects'><button>Explore</button></a>
+</motion.div>
+
+
+<motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+<h2>Backend Development</h2>
+<ul>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>MongoDB</li>
+<li>Firebase</li>
+<li>REST APIs</li>
+<li>JWT Auth</li>
+</ul>
+<a href='#Projects'><button>Explore</button></a>
+</motion.div>
+
+
+<motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+<h2>Tools & Technologies</h2>
+<ul>
+<li>Git & GitHub</li>
+<li>Postman</li>
+<li>VS Code</li>
+<li>Netlify</li>
+<li>Vercel</li>
+<li>Render</li>
+</ul>
+<a href='#Projects'><button>Explore</button></a>
+</motion.div>
+
+
+<motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+<h2>Cloud & Other Skills</h2>
+<ul>
+<li>AWS EC2</li>
+<li>AWS S3</li>
+<li>API Integration</li>
+<li>Responsive Design</li>
+</ul>
+<a href='#Projects'><button>Explore</button></a>
+</motion.div>
+
+</div>
+
+
+{/* Mobile Single Box */}
+
+<motion.div className="mobileBox">
+
+<h2>My Skills</h2>
+
+<ul>
+
+<li>HTML5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React.js</li>
+<li>TailwindCSS</li>
+<li>Framer Motion</li>
+
+<li>Node.js</li>
+<li>Express.js</li>
+<li>MongoDB</li>
+<li>Firebase</li>
+
+<li>Git & GitHub</li>
+<li>Postman</li>
+<li>Netlify</li>
+<li>Vercel</li>
+<li>Render</li>
+
+<li>AWS EC2</li>
+<li>AWS S3</li>
+<li>API Integration</li>
+<li>Responsive Design</li>
+
+</ul>
+
+<a href='#Projects'><button>Explore</button></a>
+
+</motion.div>
+
+</motion.div>
     </motion.div>
   )
 }

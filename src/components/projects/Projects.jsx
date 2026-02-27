@@ -7,25 +7,29 @@ const items = [
         id:1,
         title:"AI Content Generation SaaS Platform",
         img:"/quick.png",
-        desc:"A full-stack AI SaaS platform that generates high-quality content using AI APIs.Includes secure authentication, subscription-ready architecture, and a modern responsive interface."
+        desc:"A full-stack AI SaaS platform that generates high-quality content using AI APIs.Includes secure authentication, subscription-ready architecture, and a modern responsive interface.",
+        demo:"https://quick-ai-three-wheat.vercel.app/"
     },
     {
         id:2,
         title:"Prime Origin Exports",
         img:"/prime.png",
-        desc:"Developed a professional business website for Prime Origin Exports to showcase import and export services, products, and company information. The website features a responsive design, modern UI, and structured product presentation to improve online business visibility."
+        desc:"Developed a professional business website for Prime Origin Exports to showcase import and export services, products, and company information. The website features a responsive design, modern UI, and structured product presentation to improve online business visibility.",
+        demo:"https://prime-origin-exports.vercel.app/"
     },
     {
         id:3,
         title:"Nearby Places Recommender",
         img:"/places.png",
-        desc:"Developed a location-based web application that recommends nearby places using React.js and OpenStreetMap APIs. The application detects the user's live location and provides real-time place suggestions along with interactive maps and navigation features."
+        desc:"Developed a location-based web application that recommends nearby places using React.js and OpenStreetMap APIs. The application detects the user's live location and provides real-time place suggestions along with interactive maps and navigation features.",
+        demo:"https://places-recommendation.vercel.app/"
     },
     {
         id:4,
         title:"Chat Application",
         img:"/chat.png",
-        desc:"Developed a real-time chat application using the MERN stack that allows users to communicate instantly through secure messaging. The application includes user authentication, real-time message synchronization, and a responsive user interface."
+        desc:"Developed a real-time chat application using the MERN stack that allows users to communicate instantly through secure messaging. The application includes user authentication, real-time message synchronization, and a responsive user interface.",
+        demo:"https://fullstack-chat-app-ic2x.onrender.com/login"
     },
 ]
 
@@ -44,7 +48,7 @@ const Single = ({item}) => {
                 <motion.div className="textContainer" style={{y}}>
                     <h2>{item.title}</h2>
                     <p>{item.desc}</p>
-                    <button>See Demo</button>
+                    <button onClick={() => window.open(item.demo, "_blank")}>See Demo</button>
                 </motion.div>
                 </div>
             </div>

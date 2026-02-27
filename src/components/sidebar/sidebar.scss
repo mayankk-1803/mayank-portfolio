@@ -1,47 +1,57 @@
-.sidebar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    background-color: rgb(85, 4, 85);
-    color: white;
+@import "../../app.scss";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(85, 4, 85);
+  color: white;
+  z-index: 999;
+
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    background: rgb(150, 42, 150);
     z-index: 999;
 
-    .bg{
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 400px;
-        background: rgb(150, 42, 150) ;
-        z-index: 999;
-         
-        .links{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px; 
+    @include mobile {
+      width: 200px;
+    }
 
-            a{
-                font-size: 40px;
-            }
+    .links {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        font-size: 40px;
+
+        @include mobile {
+          font-size: 20px;
         }
+      }
     }
+  }
 
-    button{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        position: fixed;
-        z-index: 999;
-        top: 25px;
-        left: 25px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    top: 25px;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 }
